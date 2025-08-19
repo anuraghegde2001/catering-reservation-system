@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Catering - Premium Food Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Elite Catering</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <div class="nav-auth">
+                    <button class="btn btn--outline btn--sm" id="loginBtn">Login</button>
+                    <button class="btn btn--primary btn--sm" id="registerBtn">Register</button>
+                    <div class="user-profile hidden" id="userProfile">
+                        <span id="userName"></span>
+                        <div class="profile-dropdown">
+                            <a href="#" id="myOrdersBtn">My Orders</a>
+                            <a href="#" id="profileBtn">Profile</a>
+                            <a href="#" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <span class="cart-count" id="cartCount">0</span>
+                    🛒
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Exceptional Catering for Every Occasion</h1>
+                    <p>From intimate gatherings to grand celebrations, we deliver culinary excellence that creates unforgettable experiences.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn--primary btn--lg" id="exploreMenuBtn">Explore Menu</button>
+                        <button class="btn btn--outline btn--lg" id="contactUsBtn">Contact Us</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&h=400&fit=crop" alt="Premium catering spread">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="container">
+                <h2>Featured Packages</h2>
+                <div class="products-grid" id="featuredProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section hidden">
+            <div class="container">
+                <h2>Our Menu</h2>
+                <div class="menu-filters">
+                    <button class="filter-btn active" data-category="All">All</button>
+                    <button class="filter-btn" data-category="Wedding">Wedding</button>
+                    <button class="filter-btn" data-category="Corporate">Corporate</button>
+                    <button class="filter-btn" data-category="Party">Party</button>
+                    <button class="filter-btn" data-category="Indian">Indian</button>
+                    <button class="filter-btn" data-category="BBQ">BBQ</button>
+                    <button class="filter-btn" data-category="Healthy">Healthy</button>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search menu items..." class="form-control">
+                </div>
+                <div class="products-grid" id="menuProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section hidden">
+            <div class="container">
+                <h2>About Elite Catering</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>With over 15 years of experience in premium catering services, Elite Catering has been the trusted choice for discerning clients seeking exceptional culinary experiences.</p>
+                        <p>Our team of expert chefs and event specialists work tirelessly to ensure every detail is perfect, from intimate corporate lunches to grand wedding celebrations.</p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <h3>1000+</h3>
+                                <p>Events Catered</p>
+                            </div>
+                            <div class="stat">
+                                <h3>50+</h3>
+                                <p>Menu Options</p>
+                            </div>
+                            <div class="stat">
+                                <h3>15+</h3>
+                                <p>Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=400&fit=crop" alt="Our kitchen team">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section hidden">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <h4>📍 Address</h4>
+                            <p>123 Culinary Avenue, Food District, City 12345</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>📞 Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>📧 Email</h4>
+                            <p>info@elitecatering.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>🕒 Hours</h4>
+                            <p>Mon-Fri: 8AM-8PM<br>Sat-Sun: 9AM-6PM</p>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <h3>Send us a Message</h3>
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Event Type</label>
+                            <select class="form-control" id="contactEventType">
+                                <option value="">Select event type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Corporate</option>
+                                <option value="party">Party</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal hidden" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Shopping Cart</h3>
+                <button class="modal-close" id="closeCart">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                <div class="cart-total">
+                    <h4>Total: $<span id="cartTotal">0</span></h4>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" id="closeCartBtn">Continue Shopping</button>
+                <button class="btn btn--primary" id="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal hidden" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login</h3>
+                <button class="modal-close" id="closeLogin">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Login</button>
+                </form>
+                <div class="modal-switch">
+                    <p>Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+                    <p><a href="#" id="adminLoginLink">Admin Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal hidden" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Register</h3>
+                <button class="modal-close" id="closeRegister">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="registerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="registerPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Address</label>
+                        <textarea class="form-control" id="registerAddress" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Register</button>
+                </form>
+                <div class="modal-switch">
+                    <p>Already have an account? <a href="#" id="showLogin">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal hidden" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Checkout</h3>
+                <button class="modal-close" id="closeCheckout">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <h4>Event Details</h4>
+                    <div class="form-group">
+                        <label class="form-label">Event Date</label>
+                        <input type="date" class="form-control" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Event Time</label>
+                        <input type="time" class="form-control" id="eventTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Guest Count</label>
+                        <input type="number" class="form-control" id="guestCount" required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Special Instructions</label>
+                        <textarea class="form-control" id="specialInstructions" rows="3"></textarea>
+                    </div>
+                    <div class="order-summary">
+                        <h4>Order Summary</h4>
+                        <div id="checkoutItems"></div>
+                        <div class="total-amount">
+                            <strong>Total: $<span id="checkoutTotal">0</span></strong>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Orders Modal -->
+    <div class="modal hidden" id="ordersModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3>My Orders</h3>
+                <button class="modal-close" id="closeOrders">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="ordersList">
+                    <!-- Orders will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel hidden" id="adminPanel">
+        <div class="admin-nav">
+            <h2>Admin Panel</h2>
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="orders">Orders</button>
+                <button class="admin-tab" data-tab="products">Products</button>
+                <button class="admin-tab" data-tab="settings">Settings</button>
+            </div>
+            <button class="btn btn--outline" id="adminLogout">Logout</button>
+        </div>
+        <div class="admin-content">
+            <div class="admin-section active" id="admin-orders">
+                <h3>Order Management</h3>
+                <div class="orders-table">
+                    <div id="adminOrdersList"></div>
+                </div>
+            </div>
+            <div class="admin-section" id="admin-products">
+                <h3>Product Management</h3>
+                <button class="btn btn--primary mb-8" id="addProductBtn">Add New Product</button>
+                <div class="products-table">
+                    <div id="adminProductsList"></div>
+                </div>
+            </div>
+            <div class="admin-section" id="admin-settings">
+                <h3>Settings</h3>
+                <div class="settings-content">
+                    <p>Admin settings and configuration options will be displayed here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="toast hidden" id="toast">
+        <div class="toast-content">
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
